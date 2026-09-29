@@ -1,6 +1,6 @@
-[![npm version](https://badge.fury.io/js/serverless-cognito-add-custom-attributes.svg)](https://badge.fury.io/js/serverless-cognito-add-custom-attributes)
+# @monei-js/serverless-cognito-add-custom-attributes
 
-# serverless-cognito-add-custom-attributes
+MONEI fork of [michaelduminy/serverless-cognito-add-custom-attributes](https://github.com/michaelduminy/serverless-cognito-add-custom-attributes) with support for osls v4 (AWS SDK v3).
 
 This plugin allows you to add custom attributes to an existing CloudFormation-managed Cognito User Pool from serverless without losing all your users. At the time of writing (June 2018) CloudFormation doesn't know how to add custom attributes to a user pool without dropping and re-creating it, thus losing all your users.
 
@@ -12,11 +12,11 @@ This plugin also adds the specified attributes to a User Pool Client, giving tha
 
 # Usage
 
-Install `npm i serverless-cognito-add-custom-attributes`, then add `serverless-cognito-add-custom-attributes` to your serverless.yml `plugins` list.
+Install `npm i @monei-js/serverless-cognito-add-custom-attributes`, then add `@monei-js/serverless-cognito-add-custom-attributes` to your serverless.yml `plugins` list.
 
 ```yml
 plugins:
-    - serverless-cognito-add-custom-attributes
+    - '@monei-js/serverless-cognito-add-custom-attributes'
 
 custom:
   CognitoAddCustomAttributes: 
@@ -63,7 +63,7 @@ Note: If you have multiple userPool-userPoolClients you can specify them as an a
 Example:
 ```yml
 plugins:
-    - serverless-cognito-add-custom-attributes
+    - '@monei-js/serverless-cognito-add-custom-attributes'
 
 custom:
   CognitoAddCustomAttributes:
@@ -107,3 +107,7 @@ The names of your attributes supplied here will appear as `custom:{name}` when d
 
 For more information on the schema of attributes see:
 https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_SchemaAttributeType.html
+
+# Releasing
+
+Bump `version` in `package.json`, merge to `master`, then publish a GitHub release for that version. The `Publish` workflow publishes to npm with trusted publishing.

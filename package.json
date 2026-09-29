@@ -1,6 +1,6 @@
 {
-  "name": "serverless-cognito-add-custom-attributes",
-  "version": "0.3.0",
+  "name": "@monei-js/serverless-cognito-add-custom-attributes",
+  "version": "0.4.0",
   "description": "Add custom attributes to an existing CloudFormation-managed CognitoUserPool and CognitoUserPoolClient without losing all your users.",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/michaelduminy/serverless-cognito-add-custom-attributes.git"
+    "url": "git+https://github.com/MONEI/serverless-cognito-add-custom-attributes.git"
   },
   "files": [
     ".eslintrc",
@@ -29,9 +29,9 @@
     "Jared Leonard (https://github.com/jmaleonard)"
   ],
   "bugs": {
-    "url": "https://github.com/michaelduminy/serverless-cognito-add-custom-attributes/issues"
+    "url": "https://github.com/MONEI/serverless-cognito-add-custom-attributes/issues"
   },
-  "homepage": "https://github.com/michaelduminy/serverless-cognito-add-custom-attributes#readme",
+  "homepage": "https://github.com/MONEI/serverless-cognito-add-custom-attributes#readme",
   "dependencies": {
     "@aws-sdk/client-cloudformation": "^3.1137.0",
     "@aws-sdk/client-cognito-identity-provider": "^3.1137.0",
@@ -48,5 +48,8 @@
     "mocha": "^5.2.0",
     "proxyquire": "^2.1.0",
     "sinon": "^6.3.3"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
